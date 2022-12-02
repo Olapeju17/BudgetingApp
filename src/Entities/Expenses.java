@@ -1,5 +1,4 @@
 package Entities;
-
 public abstract class Expenses {
     private double percentage;
     private String category;
