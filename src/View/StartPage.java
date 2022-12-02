@@ -20,16 +20,16 @@ public class StartPage {
         String userName= firstName.toUpperCase() + lastName.toUpperCase().substring(lastName.length() -1 )+ranNum;
         System.out.println("Your username is: " +userName);
         System.out.println("Hi " + firstName + ", let's start budgeting!");
-        System.out.println("Please enter what percentage of your income will go towards the following budgets: (ex. .30 = 30%)" + '\n' + "* Budget must equal 100% *");
         System.out.println("This app will help you budget your expenses! What is your monthly income: ");
         income = input.nextDouble();
-        System.out.println('\n' + "Enter your food budget percentage: ");
+        System.out.println("Please enter what percentage of your income will go towards the following budgets: (ex. .30 = 30%)" + '\n' + "* Budget must equal 100% *");
+        System.out.print("Enter your food budget percentage: ");
         double food = input.nextDouble();
-        System.out.println("Enter your shopping budget percentage: ");
+        System.out.print("Enter your shopping budget percentage: ");
         double shop = input.nextDouble();
-        System.out.println("Enter your transportation budget percentage: ");
+        System.out.print("Enter your transportation budget percentage: ");
         double trans = input.nextDouble();
-        System.out.println("Enter your savings budget percentage: ");
+        System.out.print("Enter your savings budget percentage: ");
         double save = input.nextDouble();
         total= (save+trans+shop+food);
         while (total != 1.0) {

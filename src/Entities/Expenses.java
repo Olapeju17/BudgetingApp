@@ -6,7 +6,6 @@ public abstract class Expenses {
         this.percentage =percentage;
         this.category = category;
     }
-
     public double getPercentage() {
         return percentage;
     }
