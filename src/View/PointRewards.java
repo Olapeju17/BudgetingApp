@@ -7,6 +7,8 @@ public class PointRewards {
         this.income=income;
         this.totalLeftover=totalLeftover;
     }
+    //if statements are used to print out the amount of points earned based on the amount of money left over
+    //uses conditional operator
     public static void PointRewards() {
         if (totalLeftover > 0.0 && totalLeftover < 30.0){
             System.out.println("Congrats! You've earned 10 savings points!");}

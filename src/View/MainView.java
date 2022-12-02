@@ -2,6 +2,7 @@ package View;
 import Entities.*;
 public class MainView {
     static User user;
+    //This method runs all the classes
     public static void run (){
         StartPage.introPage();
         user=StartPage.getUser();

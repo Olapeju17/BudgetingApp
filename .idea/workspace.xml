@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98cba225-c5b4-4c7a-9c6d-6f9b8cd930c7" name="Changes" comment="MoneyUp: Edit 1">
+    <list default="true" id="98cba225-c5b4-4c7a-9c6d-6f9b8cd930c7" name="Changes" comment="MoneyUp: Edit 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/Food.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/Food.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ActualSpending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ActualSpending.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/DisplayExpenses.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/DisplayExpenses.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/DisplaySavings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/DisplaySavings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MainView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/PointRewards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PointRewards.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/StartPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,7 +100,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669945799756</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="MoneyUp: Edit 2">
+      <created>1669948261305</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1669948261306</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -109,17 +123,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="MoneyUp: Edit 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="MoneyUp: Edit 1" />
+    <MESSAGE value="MoneyUp: Edit 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="MoneyUp: Edit 2" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/View/StartPage.java</url>
-          <line>34</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Budgeting_App$Main.ic" NAME="Main Coverage Results" MODIFIED="1669948058975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Controller.*</FILTER>
+    </SUITE>
   </component>
 </project>

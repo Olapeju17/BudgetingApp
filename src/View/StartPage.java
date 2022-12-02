@@ -4,11 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.Date;
 public class StartPage {
     static double income;
     static User user;
     static void introPage() {
+        Date date = new Date();
+        //Prints today's date
+        System.out.println("Today is: " +date.toString());
         double total =0;
+        //Asks the user their names and creates a username using a random two-digit numbers
         System.out.println("Hello! Welcome to the MoneyUP! Let's get started with a username!");
         System.out.println("Please enter your first name:");
         Scanner input = new Scanner(System.in);
@@ -17,7 +22,8 @@ public class StartPage {
         String lastName = input.next();
         Random num= new Random();
         int ranNum=num.nextInt(99);
-        String userName= firstName.toUpperCase() + lastName.toUpperCase().substring(lastName.length() -1 )+ranNum;
+        String userName= firstName.toUpperCase() + lastName.toLowerCase().substring(lastName.length() -1 )+ranNum;
+        //Makes the first name upper case, lower-cases the last letter of the last name, adds random number
         System.out.println("Your username is: " +userName);
         System.out.println("Hi " + firstName + ", let's start budgeting!");
         System.out.println("This app will help you budget your expenses! What is your monthly income: ");
@@ -31,7 +37,8 @@ public class StartPage {
         double trans = input.nextDouble();
         System.out.print("Enter your savings budget percentage: ");
         double save = input.nextDouble();
-        total= (save+trans+shop+food);
+        total= (food+shop+trans+save);
+        //while loop makes sure that the user doesn't input a percentage that is higher/lower than 100%
         while (total != 1.0) {
             if (total > 1.0) {
                 System.out.println("You've entered: " + ((total)*100) + "%. That's too high! Please re-enter your budget! * Must equal 100% *");
@@ -40,23 +47,25 @@ public class StartPage {
             } else {
                 break;
             }
-            System.out.println('\n' + "Enter your food budget percentage: ");
+            System.out.print("Enter your food budget percentage: ");
             food = input.nextDouble();
-            System.out.println("Enter your shopping budget percentage: ");
-            save = input.nextDouble();
-            System.out.println("Enter your transportation budget percentage: ");
+            System.out.print("Enter your shopping budget percentage: ");
+            shop = input.nextDouble();
+            System.out.print("Enter your transportation budget percentage: ");
             trans = input.nextDouble();
-            System.out.println("Enter your savings budget percentage: ");
+            System.out.print("Enter your savings budget percentage: ");
             save = input.nextDouble();
             total=0;
-            total= (save+trans+shop+food);
+            total= (food+shop+trans+save);
         }
         System.out.println("Thank you! You've budgeted 100%.");
         System.out.println("How much money do you pay in rent each month? (If you don't pay rent, enter 0)");
         double rent = input.nextDouble();
         double rentPercent = (rent/income);
         income -=rent;
+        System.out.println("After rent, your income is: " +income+ "! This will be the amount that we will budget!");
         user = new User(firstName,lastName,userName,income);
+        //Gets variables from abstract class
         Expenses foodE = new Food(food,"Variable");
         Expenses shopE =new Shopping(shop,"Variable");
         Expenses transE =new Transportation(trans, "Variable");

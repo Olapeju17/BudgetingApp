@@ -1,5 +1,6 @@
 package View;
 import Entities.User;
+import java.lang.Math;
 public class DisplayExpenses {
     static double foodValue;
     static double shopValue;
@@ -12,17 +13,19 @@ public class DisplayExpenses {
         this.user =user;
         income = user.getIncome();
     }
+    //saves values and prints out the users percentages  using Math method, and getters
     public static void displayExpenses(){
-        foodValue =(Math.round((user.getExpensesList().get(0).getPercentage())*100));
-        shopValue = (Math.round((user.getExpensesList().get(1).getPercentage())*100));
-        transValue = (Math.round((user.getExpensesList().get(2).getPercentage())*100));
-        saveValue = (Math.round((user.getExpensesList().get(3).getPercentage())*100));
-        rentValue = (Math.round((user.getExpensesList().get(4).getPercentage())*100));
-        System.out.println("Food is: " + foodValue + "%");
-        System.out.println("Shopping is: " + shopValue+"%");
-        System.out.println("Transportation is: " + transValue +"%");
-        System.out.println("Savings is: " + saveValue +"%");
-        System.out.println("Your rent is: " +rentValue+"% of your income!");
+        //Multiplies by 100 because the inputs were take by decimals, rounds to an integer to print whole number
+        foodValue =((user.getExpensesList().get(0).getPercentage())*100);
+        shopValue = ((user.getExpensesList().get(1).getPercentage())*100);
+        transValue = ((user.getExpensesList().get(2).getPercentage())*100);
+        saveValue = ((user.getExpensesList().get(3).getPercentage())*100);
+        rentValue = ((user.getExpensesList().get(4).getPercentage())*100);
+        System.out.println("Food is: " + Math.round(foodValue) + "%");
+        System.out.println("Shopping is: " + Math.round(shopValue)+"%");
+        System.out.println("Transportation is: " + Math.round(transValue) +"%");
+        System.out.println("Savings is: " + Math.round(saveValue) +"%");
+        //Divides by 100 to change Value back to a decimal
         System.out.println("Your monthly food budget is: $" + ((foodValue * income)/100));
         System.out.println("Your monthly shopping budget is: $" + ((shopValue * income)/100));
         System.out.println("Your monthly transportation budget is: $" + ((transValue *income)/100));
@@ -39,8 +42,5 @@ public class DisplayExpenses {
     }
     public double getSaveValue (){
         return saveValue;
-    }
-    public double getRentValue (){
-        return rentValue;
     }
 }
