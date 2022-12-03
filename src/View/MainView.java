@@ -2,6 +2,7 @@ package View;
 import Entities.*;
 public class MainView {
     static User user;
+
     //This method runs all the classes
     public static void run (){
         StartPage.introPage();
@@ -16,6 +17,7 @@ public class MainView {
         PointRewards.PointRewards();
         DisplaySavings displaySavings =new DisplaySavings(actualSpending.getSavingActual(),actualSpending.getTotalLeftover());
         DisplaySavings.savings();
+
     }
 }
 

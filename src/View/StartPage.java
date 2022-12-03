@@ -6,12 +6,14 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.Date;
 public class StartPage {
+    //public static String FoodE;
     static double income;
+    static Expenses expenses;
     static User user;
     static void introPage() {
         Date date = new Date();
         //Prints today's date
-        System.out.println("Today is: " +date.toString());
+        System.out.println("Today is: " + date);
         double total =0;
         //Asks the user their names and creates a username using a random two-digit numbers
         System.out.println("Hello! Welcome to the MoneyUP! Let's get started with a username!");
@@ -22,9 +24,9 @@ public class StartPage {
         String lastName = input.next();
         Random num= new Random();
         int ranNum=num.nextInt(99);
+        //String method length()
         String userName= firstName.toUpperCase() + lastName.toLowerCase().substring(lastName.length() -1 )+ranNum;
         //Makes the first name upper case, lower-cases the last letter of the last name, adds random number
-        System.out.println("Your username is: " +userName);
         System.out.println("Hi " + firstName + ", let's start budgeting!");
         System.out.println("This app will help you budget your expenses! What is your monthly income: ");
         income = input.nextDouble();
@@ -63,14 +65,14 @@ public class StartPage {
         double rent = input.nextDouble();
         double rentPercent = (rent/income);
         income -=rent;
-        System.out.println("After rent, your income is: " +income+ "! This will be the amount that we will budget!");
+        System.out.println("After rent, your income is: " +income+ "!");
         user = new User(firstName,lastName,userName,income);
         //Gets variables from abstract class
-        Expenses foodE = new Food(food,"Variable");
-        Expenses shopE =new Shopping(shop,"Variable");
-        Expenses transE =new Transportation(trans, "Variable");
-        Expenses saveE = new Savings(save, "Variable");
-        Expenses rentE = new Rent(rentPercent, "Fixed");
+        Expenses foodE = new Food(food);
+        Expenses shopE =new Shopping(shop);
+        Expenses transE =new Transportation(trans);
+        Expenses saveE = new Savings(save);
+        Expenses rentE = new Rent(rentPercent);
         List<Expenses> expensesList = new ArrayList<>();
         expensesList.add(foodE);
         expensesList.add(shopE);
@@ -78,7 +80,11 @@ public class StartPage {
         expensesList.add(saveE);
         expensesList.add(rentE);
         user.setExpensesList(expensesList);
+        System.out.println("----------------------------------------------");
+        System.out.println("Here is your personal profile: " + "\n" + getUser());
+        System.out.println("----------------------------------------------");
     }
+    //return value from method
     public static User getUser() {
         return user;
     }

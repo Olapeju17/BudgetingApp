@@ -1,7 +1,5 @@
 package Entities;
 
-import Entities.Expenses;
-
 import java.util.List;
 public class User {
     private String fistName;
@@ -21,7 +19,7 @@ public class User {
     public String getLastName() {
         return lastName;
     }
-public String getUserName (){
+    public String getUserName (){
         return userName;
 }
     public double getIncome() {
@@ -34,7 +32,6 @@ public String getUserName (){
         return expensesList;
     }
     public String toString (){
-        return getFistName()+ " " + getLastName() + "\n" +
-                "Entities.User name: " + getUserName() + "\n Earns: " + getIncome();
+        return getFistName()+ " " + getLastName() + "\n" + "User name: " + getUserName() + "\nAvailable to budget: $" + getIncome();
     }
 }
