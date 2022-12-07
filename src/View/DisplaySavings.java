@@ -28,6 +28,5 @@ public class DisplaySavings {
                 break;
         }
         System.out.println(savingsString);
-        System.out.println("Thank you for using MoneyUp!");
     }
 }

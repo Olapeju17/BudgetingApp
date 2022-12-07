@@ -7,7 +7,7 @@ public class Advice {
         //Prints today's date
         System.out.println("Today is: " + date);
         //Asks the user their names and creates a username using a random two-digit numbers
-        System.out.println("Hello! Welcome to the MoneyUP! The budgeting app!" +"\n");
+        System.out.println("Hello! Welcome to MoneyUP! The budgeting app!" +"\n");
                 Advice();
                 System.out.println(Advice(15,20,25,40));
             }
@@ -18,6 +18,6 @@ public class Advice {
                 System.out.println("Advice 3: If you know your income is constant try to keep your important expenses fixed." + "\n"+ "-----------------------------------------------------------------------------------------");
             }
             public static String Advice ( int recommendedFood, int recommendedShop, int recommendedTrans, int recommendedSave) {
-                return ("Before you get started we generally recommend beginners to allocate " + recommendedFood + "%" + " on food, " + recommendedShop+ "%" + " on shopping, " +recommendedTrans+ "%" + " on transportation, and "+ recommendedSave+ "%" + " on savings" + "\n" + "Thank you, lets begin !!" );
+                return ("Before you get started we generally recommend beginners to allocate " + recommendedFood + "%" + " on food, " + recommendedShop+ "%" + " on shopping, " +recommendedTrans+ "%" + " on transportation, and "+ recommendedSave+ "%" + " on savings" + "\n" + "Thank you, let's begin !!" );
             }
         }

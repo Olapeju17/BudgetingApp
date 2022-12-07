@@ -14,11 +14,10 @@ public class MainView {
                 displayExpenses.getTransValue(),displayExpenses.getSaveValue());
         ActualSpending.actualSpending();
         ActualSpending.displaySpending();
-        PointRewards pointRewards = new PointRewards(user.getIncome(),actualSpending.getTotalLeftover());
-        PointRewards.PointRewards();
         DisplaySavings displaySavings =new DisplaySavings(actualSpending.getSavingActual(),actualSpending.getTotalLeftover());
         DisplaySavings.savings();
-
+        PointRewards pointRewards = new PointRewards(user.getIncome(),actualSpending.getTotalLeftover());
+        PointRewards.PointRewards();
     }
 }
 
