@@ -5,6 +5,7 @@ public class MainView {
 
     //This method runs all the classes
     public static void run (){
+        Advice.adviceGiven();
         StartPage.introPage();
         user=StartPage.getUser();
         DisplayExpenses displayExpenses = new DisplayExpenses(user);

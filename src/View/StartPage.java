@@ -4,19 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.Date;
 public class StartPage {
-    //public static String FoodE;
     static double income;
-    static Expenses expenses;
+    //static Expenses expenses;
     static User user;
     static void introPage() {
-        Date date = new Date();
-        //Prints today's date
-        System.out.println("Today is: " + date);
         double total =0;
-        //Asks the user their names and creates a username using a random two-digit numbers
-        System.out.println("Hello! Welcome to the MoneyUP! Let's get started with a username!");
+        System.out.println("Let's get started with a username!");
         System.out.println("Please enter your first name:");
         Scanner input = new Scanner(System.in);
         String firstName = input.next();
