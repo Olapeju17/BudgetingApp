@@ -1,4 +1,7 @@
 package View;
+
+import javax.swing.*;
+
 public class PointRewards {
     static double totalLeftover;
     static double income;
@@ -53,5 +56,16 @@ public class PointRewards {
             System.out.println("You've earned 0 points");
         }
         System.out.println("Thank you for using MoneyUp!");
+
+    }
+    //button
+    public static void Button() {
+            JFrame frame = new JFrame();
+            JButton button = new JButton("Thank you for using MoneyUp! Good bye!");
+            frame.add(button);
+            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setSize(400, 100);
+            frame.setLocationRelativeTo(null);
+            frame.setVisible(true);
     }
 }

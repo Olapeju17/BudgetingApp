@@ -18,7 +18,7 @@ public class MainView {
         DisplaySavings.savings();
         PointRewards pointRewards = new PointRewards(user.getIncome(),actualSpending.getTotalLeftover());
         PointRewards.PointRewards();
-        Button.Button();
+        PointRewards.Button();
     }
 }
 
