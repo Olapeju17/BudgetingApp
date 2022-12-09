@@ -16,8 +16,9 @@ public class MainView {
         ActualSpending.displaySpending();
         DisplaySavings displaySavings =new DisplaySavings(actualSpending.getSavingActual(),actualSpending.getTotalLeftover());
         DisplaySavings.savings();
-        PointRewards pointRewards = new PointRewards(user.getIncome(),actualSpending.getTotalLeftover());
+        PointRewards pointRewards = new PointRewards(user.getIncome(),actualSpending.getTotalLeftover(),DisplaySavings.getFinalSavings());
         PointRewards.PointRewards();
+        PointRewards.investment();
         PointRewards.Button();
     }
 }

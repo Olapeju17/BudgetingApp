@@ -1,16 +1,18 @@
 package View;
 
 import javax.swing.*;
+import java.util.Scanner;
 
 public class PointRewards {
     static double totalLeftover;
     static double income;
-
-    public PointRewards(double income, double totalLeftover) {
+    static double finalSavings;
+    static double savingInvested;
+    public PointRewards(double income, double totalLeftover,double finalSavings) {
         this.income = income;
         this.totalLeftover = totalLeftover;
+        this.finalSavings=finalSavings;
     }
-
     //if statements are used to print out the amount of points earned based on the amount of money left over
     //uses conditional operator
     public static void PointRewards() {
@@ -58,14 +60,37 @@ public class PointRewards {
         System.out.println("Thank you for using MoneyUp!");
 
     }
+    //gives users the option to add their savings to investments
+    protected static void investment() {
+        System.out.println("----------------------------------------------------");
+        System.out.println("Would you like to invest a portion of your savings? " + "\n" + "Click 1 for yes, Click 2 for no.");
+        Scanner input = new Scanner(System.in);
+        int x = input.nextInt();
+        int invest =x;
+        String investmentString = "";
+        switch (invest) {
+            case 1:
+                investmentString = "Great! Please enter what percent you'd like to invest. (ex. .30 = 30%)";
+                System.out.println(investmentString);
+                double investPercentage = input.nextDouble();
+                savingInvested = (finalSavings * investPercentage);
+                //multiplying savings by the users choice of percentage
+                System.out.println("$" + savingInvested + " will be invested! Thank you!");
+                break;
+            case 2:
+                investmentString = "You chose to not invest, thank you.";
+                System.out.println(investmentString);
+                break;
+        }
     //button
+    }
     public static void Button() {
-            JFrame frame = new JFrame();
-            JButton button = new JButton("Thank you for using MoneyUp! Good bye!");
-            frame.add(button);
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(400, 100);
-            frame.setLocationRelativeTo(null);
-            frame.setVisible(true);
+        JFrame frame = new JFrame();
+        JButton button = new JButton("Thank you for using MoneyUp! Good bye!");
+        frame.add(button);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(400, 100);
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }
 }

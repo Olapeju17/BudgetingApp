@@ -47,6 +47,7 @@ public class ActualSpending {
         }
         System.out.println("\n" + "-----------------------------------");
     }
+
     //encapsulation
     public double getTotalLeftover (){
         return totalLeftover;

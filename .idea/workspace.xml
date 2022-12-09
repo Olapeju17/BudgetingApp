@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="98cba225-c5b4-4c7a-9c6d-6f9b8cd930c7" name="Changes" comment="MoneyUp: Edit 6- Olapeju">
+    <list default="true" id="98cba225-c5b4-4c7a-9c6d-6f9b8cd930c7" name="Changes" comment="MoneyUp: Edit 7- Olapeju">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ActualSpending.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/ActualSpending.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/DisplaySavings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/DisplaySavings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/MainView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/MainView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/View/PointRewards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PointRewards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/StartPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -159,7 +162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670453376021</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="MoneyUp: Edit 7- Olapeju">
+      <created>1670460292393</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670460292393</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -180,7 +190,8 @@
     <MESSAGE value="MoneyUp: Edit 4- Peju" />
     <MESSAGE value="MoneyUp: Edit 5- Geo" />
     <MESSAGE value="MoneyUp: Edit 6- Olapeju" />
-    <option name="LAST_COMMIT_MESSAGE" value="MoneyUp: Edit 6- Olapeju" />
+    <MESSAGE value="MoneyUp: Edit 7- Olapeju" />
+    <option name="LAST_COMMIT_MESSAGE" value="MoneyUp: Edit 7- Olapeju" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
