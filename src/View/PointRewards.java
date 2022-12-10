@@ -8,11 +8,13 @@ public class PointRewards {
     static double income;
     static double finalSavings;
     static double savingInvested;
-    public PointRewards(double income, double totalLeftover,double finalSavings) {
+
+    public PointRewards(double income, double totalLeftover, double finalSavings) {
         this.income = income;
         this.totalLeftover = totalLeftover;
-        this.finalSavings=finalSavings;
+        this.finalSavings = finalSavings;
     }
+
     //if statements are used to print out the amount of points earned based on the amount of money left over
     //uses conditional operator
     public static void PointRewards() {
@@ -57,16 +59,15 @@ public class PointRewards {
         } else if (totalLeftover == 0.0) {
             System.out.println("You've earned 0 points");
         }
-        System.out.println("Thank you for using MoneyUp!");
-
+        System.out.println("----------------------------------------------------");
     }
+
     //gives users the option to add their savings to investments
     protected static void investment() {
-        System.out.println("----------------------------------------------------");
         System.out.println("Would you like to invest a portion of your savings? " + "\n" + "Click 1 for yes, Click 2 for no.");
         Scanner input = new Scanner(System.in);
         int x = input.nextInt();
-        int invest =x;
+        int invest = x;
         String investmentString = "";
         switch (invest) {
             case 1:
@@ -75,16 +76,36 @@ public class PointRewards {
                 double investPercentage = input.nextDouble();
                 savingInvested = (finalSavings * investPercentage);
                 //multiplying savings by the users choice of percentage
-                System.out.println("$" + savingInvested + " will be invested! Thank you!");
+                System.out.println("$" + Math.round(savingInvested) + " will be invested! Thank you!");
                 break;
             case 2:
                 investmentString = "You chose to not invest, thank you.";
                 System.out.println(investmentString);
                 break;
         }
-    //button
+        System.out.println("*************************************************");
     }
-    public static void Button() {
+    public static void Balance() {
+        double newSavings =(finalSavings-savingInvested);
+        System.out.println("Here is your new account balance!"+ "\n");
+        String[][] balance = new String[3][2];
+        balance[0][0] = "Balance Type:";
+        balance[0][1] = "Amount";
+        balance[1][0] = "Savings Balance: | ";
+        balance[1][1] = ("$"+ (newSavings) + " | ");
+        balance[2][0] = "Investment Balance: | ";
+        balance[2][1] = ("$"+(Math.round(savingInvested)) + " | ");
+        System.out.print(balance[0][0] + " | " + balance[0][1]);
+        for (int r = 1; r < 3; r++) {
+            System.out.println("\n"+"-------------------------");
+            for (int c = 0; c < 2; c++) {
+                System.out.print(balance[r][c]);
+            }
+        }
+        savingInvested =0;
+        System.out.println("\n" +"********************************************");
+    }
+    public static void Button () {
         JFrame frame = new JFrame();
         JButton button = new JButton("Thank you for using MoneyUp! Good bye!");
         frame.add(button);

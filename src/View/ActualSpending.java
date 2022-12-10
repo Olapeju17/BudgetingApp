@@ -33,10 +33,10 @@ public class ActualSpending {
     public static void displaySpending(){
         table = new String[5][4];
         table[0][0] = "Category"; table[0][1] = "Budget"; table[0][2]= "Spent"; table[0][3]= "Remainder";
-        table[1][0] = "Food | "; table[1][1]=(((foodValue * income)/100)+ " | "); table[1][2]= ((foodActual)+ " | "); table[1][3]= ((leftOverFood)+ " | ");
-        table[2][0] = "Shopping | "; table[2][1]=(((shopValue * income)/100)+ " | "); table[2][2]= ((shopActual)+ " | "); table[2][3]= ((leftOverShop)+ " | ");
-        table[3][0] ="Transport | "; table[3][1]=(((transValue *income)/100)+ " | "); table[3][2]= ((transActual)+ " | "); table[3][3]= ((leftOverTrans)+ " | ");
-        table[4][0] ="Savings | "; table[4][1]=(((saveValue * income)/100)+ " | "); table[4][2]= ((savingActual)+ " | "); table[4][3]= ((leftOverSaving)+ " | ");
+        table[1][0] = "Food |     "; table[1][1]=("$"+((foodValue * income)/100)+ " | "); table[1][2]= ("$"+(foodActual)+ " | "); table[1][3]= ("$"+(leftOverFood)+ " | ");
+        table[2][0] = "Shopping | "; table[2][1]=("$"+((shopValue * income)/100)+ " | "); table[2][2]= ("$"+(shopActual)+ " | "); table[2][3]= ("$"+(leftOverShop)+ " | ");
+        table[3][0] ="Transport | "; table[3][1]=("$"+((transValue *income)/100)+ " | "); table[3][2]= ("$"+(transActual)+ " | "); table[3][3]= ("$"+(leftOverTrans)+ " | ");
+        table[4][0] ="Savings | "; table[4][1]=("$"+((saveValue * income)/100)+ " | "); table[4][2]= ("$"+(savingActual)+ " | "); table[4][3]= ("$"+(leftOverSaving)+ " | ");
         System.out.print(table[0][0] + " | " + table[0][1]+ " | " + table[0][2] + " | " + table[0][3]+ " | ");
         for (int r = 1; r < 5; r++) {
             System.out.print("\n");
