@@ -23,7 +23,7 @@ public class StartPage {
         double total = 0;
         System.out.println("This app will help you budget your expenses! What is your monthly income: ");
         income = input.nextDouble();
-        System.out.println("Please enter what percentage of your income will go towards the following budgets: " + '\n' + "* Budget must equal 100% *");
+        System.out.println("Please enter what percentage of your income will go towards the following budgets: (ex. 20 = 20%)" + '\n' + "* Budget must equal 100% *");
         System.out.print("Enter your food budget percentage: ");
         double food = input.nextDouble();
         System.out.print("Enter your shopping budget percentage: ");

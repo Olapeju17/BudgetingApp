@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="98cba225-c5b4-4c7a-9c6d-6f9b8cd930c7" name="Changes" comment="MoneyUp: Final Edit - Olapeju">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Advice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/Advice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entities/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entities/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/PointRewards.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/PointRewards.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/StartPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/View/StartPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +35,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2IJxHoQuiVscNF7mBTHtIpA45Ba" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -186,7 +191,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670660469174</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="MoneyUp: Final Edit - Olapeju">
+      <created>1670662012942</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670662012942</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

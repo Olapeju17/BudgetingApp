@@ -69,13 +69,13 @@ public class PointRewards {
         String investmentString = "";
         switch (invest) {
             case 1:
-                investmentString = "Great! Please enter what percent you'd like to invest";
+                investmentString = "Please enter what percent you'd like to invest. (ex. 20 = 20%)" +'\n'+"You must enter a value under 100%.";
                 System.out.println(investmentString);
-                double investPercentage = input.nextDouble();
+                int investPercentage = input.nextInt();
                 investPercentage /= 100;
                 savingInvested = (finalSavings * investPercentage);
                 //multiplying savings by the users choice of percentage
-                System.out.println("$" + Math.round(savingInvested) + " will be invested! Thank you!");
+                System.out.println("$" + (savingInvested) + " will be invested! Thank you!");
                 break;
             case 2:
                 investmentString = "You chose to not invest, thank you.";

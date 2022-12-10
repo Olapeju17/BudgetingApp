@@ -2,19 +2,19 @@ package Entities;
 
 import java.util.List;
 public class User {
-    private String fistName;
+    private String firstName;
     private String lastName;
     private String userName;
     private double income;
     private List <Expenses> expensesList;
-    public User (String fistName, String lastName,String userName, double income){
-        this.fistName = fistName;
+    public User (String firstName, String lastName,String userName, double income){
+        this.firstName = firstName;
         this.lastName= lastName;
         this.userName = userName;
         this.income=income;
     }
     public String getFistName() {
-        return fistName;
+        return firstName;
     }
     public String getLastName() {
         return lastName;
