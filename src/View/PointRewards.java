@@ -1,5 +1,4 @@
 package View;
-
 import javax.swing.*;
 import java.util.Scanner;
 
@@ -8,6 +7,7 @@ public class PointRewards {
     static double income;
     static double finalSavings;
     static double savingInvested;
+
 
     public PointRewards(double income, double totalLeftover, double finalSavings) {
         this.income = income;
@@ -69,7 +69,7 @@ public class PointRewards {
         String investmentString = "";
         switch (invest) {
             case 1:
-                investmentString = "Great! Please enter what percent you'd like to invest. (ex. 20 = 20%)" +'\n'+"You must enter a value under 100%.";
+                investmentString = "Great! Please enter what percent you'd like to invest. (ex. 20 = 20%)";
                 System.out.println(investmentString);
                 int investPercentage = input.nextInt();
                 investPercentage /= 100;
