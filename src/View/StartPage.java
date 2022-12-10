@@ -6,7 +6,6 @@ import java.util.Random;
 import java.util.Scanner;
 public class StartPage {
     static double income;
-    //static Expenses expenses;
     static User user;
     static void introPage() {
             System.out.println("Please enter your first name:");
@@ -14,6 +13,7 @@ public class StartPage {
             String firstName = input.next();
             System.out.println("Please enter your last name:");
             String  lastName = input.next();
+            //creates custom username
             Random num = new Random();
             int ranNum = num.nextInt(99);
             //String method length()
@@ -21,10 +21,9 @@ public class StartPage {
             //Makes the first name upper case, lower-cases the last letter of the last name, adds random number
             System.out.println("Hi " + firstName + ", let's start budgeting!");
         double total = 0;
-        //break here
         System.out.println("This app will help you budget your expenses! What is your monthly income: ");
         income = input.nextDouble();
-        System.out.println("Please enter what percentage of your income will go towards the following budgets: (ex. 30% = .30)" + '\n' + "* Budget must equal 100% *");
+        System.out.println("Please enter what percentage of your income will go towards the following budgets: " + '\n' + "* Budget must equal 100% *");
         System.out.print("Enter your food budget percentage: ");
         double food = input.nextDouble();
         System.out.print("Enter your shopping budget percentage: ");
@@ -35,11 +34,11 @@ public class StartPage {
         double save = input.nextDouble();
         total = (food + shop + trans + save);
         //while loop makes sure that the user doesn't input a percentage that is higher/lower than 100%
-        while (total != 1.0) {
-            if (total > 1.0) {
-                System.out.println("You've entered: " + ((total) * 100) + "%. That's too high! Please re-enter your budget! * Must equal 100% *");
-            } else if (total < 1.0) {
-                System.out.println("You've entered: " + ((total) * 100) + "%. That's too low! Please re-enter your budget! * Must equal 100% *");
+        while (total != 100) {
+            if (total > 100) {
+                System.out.println("You've entered: " + (total) + "%. That's too high! Please re-enter your budget! * Must equal 100% *");
+            } else if (total < 100) {
+                System.out.println("You've entered: " + (total) + "%. That's too low! Please re-enter your budget! * Must equal 100% *");
             } else {
                 break;
             }
@@ -54,7 +53,13 @@ public class StartPage {
             total = 0;
             total = (food + shop + trans + save);
         }
+        food /= 100;
+        shop /= 100;
+        trans /= 100;
+        save /= 100;
         System.out.println("Thank you! You've budgeted 100%.");
+        System.out.println("----------------------------------------------------------------------------------------------------");
+        System.out.println("Rent is a fixed payment so we will be including it in your budget.");
         System.out.println("How much money do you pay in rent each month? (If you don't pay rent, enter 0)");
         double rent = input.nextDouble();
         double rentPercent = (rent / income);

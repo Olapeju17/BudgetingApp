@@ -14,7 +14,6 @@ public class PointRewards {
         this.totalLeftover = totalLeftover;
         this.finalSavings = finalSavings;
     }
-
     //if statements are used to print out the amount of points earned based on the amount of money left over
     //uses conditional operator
     public static void PointRewards() {
@@ -61,7 +60,6 @@ public class PointRewards {
         }
         System.out.println("----------------------------------------------------");
     }
-
     //gives users the option to add their savings to investments
     protected static void investment() {
         System.out.println("Would you like to invest a portion of your savings? " + "\n" + "Click 1 for yes, Click 2 for no.");
@@ -71,9 +69,10 @@ public class PointRewards {
         String investmentString = "";
         switch (invest) {
             case 1:
-                investmentString = "Great! Please enter what percent you'd like to invest. (ex. .30 = 30%)";
+                investmentString = "Great! Please enter what percent you'd like to invest";
                 System.out.println(investmentString);
                 double investPercentage = input.nextDouble();
+                investPercentage /= 100;
                 savingInvested = (finalSavings * investPercentage);
                 //multiplying savings by the users choice of percentage
                 System.out.println("$" + Math.round(savingInvested) + " will be invested! Thank you!");
@@ -89,9 +88,9 @@ public class PointRewards {
         double newSavings =(finalSavings-savingInvested);
         System.out.println("Here is your new account balance!"+ "\n");
         String[][] balance = new String[3][2];
-        balance[0][0] = "Balance Type:";
-        balance[0][1] = "Amount";
-        balance[1][0] = "Savings Balance: | ";
+        balance[0][0] = "Balance Type:  ";
+        balance[0][1] = "Amount:";
+        balance[1][0] = "Savings Balance:   | ";
         balance[1][1] = ("$"+ (newSavings) + " | ");
         balance[2][0] = "Investment Balance: | ";
         balance[2][1] = ("$"+(Math.round(savingInvested)) + " | ");

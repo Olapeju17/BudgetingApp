@@ -4,7 +4,6 @@ public class DisplaySavings {
     static double savingActual;
     static double totalLeftover;
     static double finalSavings;
-
     public DisplaySavings(double savingActual, double totalLeftover) {
         this.savingActual = savingActual;
         this.totalLeftover = totalLeftover;
