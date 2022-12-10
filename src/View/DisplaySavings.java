@@ -7,6 +7,7 @@ public class DisplaySavings {
     public DisplaySavings(double savingActual, double totalLeftover) {
         this.savingActual = savingActual;
         this.totalLeftover = totalLeftover;
+
     }
     //uses switch statement to let user choose to add money to their saving or not to
     protected static void savings() {

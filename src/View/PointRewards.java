@@ -1,13 +1,11 @@
 package View;
 import javax.swing.*;
 import java.util.Scanner;
-
 public class PointRewards {
     static double totalLeftover;
     static double income;
     static double finalSavings;
     static double savingInvested;
-
 
     public PointRewards(double income, double totalLeftover, double finalSavings) {
         this.income = income;
@@ -61,7 +59,8 @@ public class PointRewards {
         System.out.println("----------------------------------------------------");
     }
     //gives users the option to add their savings to investments
-    protected static void investment() {
+
+    protected static void Investment() {
         System.out.println("Would you like to invest a portion of your savings? " + "\n" + "Click 1 for yes, Click 2 for no.");
         Scanner input = new Scanner(System.in);
         int x = input.nextInt();
@@ -72,8 +71,9 @@ public class PointRewards {
                 investmentString = "Great! Please enter what percent you'd like to invest. (ex. 20 = 20%)";
                 System.out.println(investmentString);
                 int investPercentage = input.nextInt();
-                investPercentage /= 100;
+                //investPercentage /= 100;
                 savingInvested = (finalSavings * investPercentage);
+                savingInvested /= 100;
                 //multiplying savings by the users choice of percentage
                 System.out.println("$" + (savingInvested) + " will be invested! Thank you!");
                 break;
@@ -82,7 +82,7 @@ public class PointRewards {
                 System.out.println(investmentString);
                 break;
         }
-        System.out.println("*************************************************");
+        System.out.println("********************************************");
     }
     public static void Balance() {
         double newSavings =(finalSavings-savingInvested);
@@ -96,7 +96,7 @@ public class PointRewards {
         balance[2][1] = ("$"+(Math.round(savingInvested)) + " | ");
         System.out.print(balance[0][0] + " | " + balance[0][1]);
         for (int r = 1; r < 3; r++) {
-            System.out.println("\n"+"-------------------------");
+            System.out.println("\n"+"------------------------------");
             for (int c = 0; c < 2; c++) {
                 System.out.print(balance[r][c]);
             }
@@ -114,3 +114,4 @@ public class PointRewards {
         frame.setVisible(true);
     }
 }
+

@@ -1,6 +1,5 @@
 package View;
 import Entities.*;
-
 import java.util.Scanner;
 
 public class MainView {
@@ -21,7 +20,7 @@ public class MainView {
         DisplaySavings.savings();
         PointRewards pointRewards = new PointRewards(user.getIncome(), actualSpending.getTotalLeftover(), DisplaySavings.getFinalSavings());
         PointRewards.PointRewards();
-        PointRewards.investment();
+        PointRewards.Investment();
         PointRewards.Balance();
         MainView.again();
         System.out.println("Good Bye!");
@@ -46,7 +45,7 @@ public class MainView {
             DisplaySavings.savings();
             PointRewards pointRewards = new PointRewards(user.getIncome(), actualSpending.getTotalLeftover(), DisplaySavings.getFinalSavings());
             PointRewards.PointRewards();
-            PointRewards.investment();
+            PointRewards.Investment();
             PointRewards.Balance();
             MainView.again();
             x = 0;
